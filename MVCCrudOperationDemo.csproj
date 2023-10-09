@@ -124,7 +124,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\CustomerViewModel.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\DataLayer.cs" />
+    <Compile Include="Models\MiddlerLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -213,12 +215,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MiddleLayer\MiddleLayer.csproj">
-      <Project>{421f7a3a-54b7-4aba-ae4e-2372ae3a4933}</Project>
-      <Name>MiddleLayer</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

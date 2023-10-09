@@ -9,7 +9,7 @@ using System.Web.Mvc;
 namespace MVCCrudOperationDemo.Models
 {
     [Bind(Exclude = "action")]
-    public class CustomerViewModel
+    public class Customer
     {
         public int action { get; set; }
 

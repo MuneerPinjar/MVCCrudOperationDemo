@@ -241,6 +241,73 @@
     </div>
 }
 
+
+<script>
+
+    function edit(customer_id) {
+
+        var dataobject =
+
+        {
+
+            customer_id: customer_id
+
+        };
+
+        $.ajax({
+
+            type: "POST",
+
+            url: "/Home/edit_customer",
+
+            data: dataobject,
+
+            dataType: "json",
+
+            success: function (r) {
+
+                debugger;
+
+                if (r != null) {
+
+                    $("#hdn_customer_id").val(r.customer_id);
+
+                    $("#txt_customer_name").val(r.customer_name);
+
+                    $("#txt_address_text").val(r.address_text);
+
+                    $("#txt_contact_no").val(r.contact_no);
+
+                    $("#txt_email").val(r.email);
+
+                    $("#txt_password").val(r.password);
+
+                    $("#btn_Save").val('Update');
+
+                    $(".vb_msg").text('');
+
+                }
+
+                else {
+
+                    alert("Details Not Found !!!");
+
+                }
+
+            }
+
+        });
+
+    }
+
+</script>
+
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+@section Scripts {
+
+    @Scripts.Render("~/bundles/jqueryval")
+
+}
